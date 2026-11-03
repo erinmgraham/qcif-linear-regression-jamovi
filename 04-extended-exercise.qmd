@@ -1,0 +1,67 @@
+---
+title: "Lesson 4: Extended Plasma Beta-Carotene Exercise"
+---
+
+[Workshop home](index.qmd) | [Previous: Multiple linear regression](03-multiple-linear-regression.qmd)
+
+# Study and outcome
+
+The source lesson uses a cross-sectional dataset of 315 participants and investigates associations between personal characteristics, dietary factors and plasma beta-carotene. Confirm the study description and variable dictionary against the distributed dataset and original documentation.
+
+# Tasks
+
+1. Open the plasma dataset.
+2. Confirm variable labels, value labels and measurement levels.
+3. Explore the distribution of plasma beta-carotene.
+4. Examine correlations among continuous predictors.
+5. Fit the prespecified untransformed model.
+6. Inspect residual-versus-fitted and Q-Q plots, influence and collinearity.
+7. If scientifically justified, create a log-transformed outcome using a computed variable.
+8. Fit the transformed model and compare diagnostics.
+9. Interpret transformed coefficients on an appropriate scale.
+
+## Categorical predictors
+
+Add categorical predictors to **Factors**, allowing jamovi to handle indicator coding. Confirm the reference level. Manual dummy variables are unnecessary unless the lesson is intentionally teaching their construction.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: computed log outcome"}
+The source uses a transformation equivalent to `ln(betaplasma + 1)` because a zero is present. Capture and verify the final formula.
+
+Suggested filename: `images/19-log-transform.png`
+:::
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: plasma models"}
+Suggested filenames: `images/20-plasma-model.png`, `images/21-plasma-residuals.png`, and `images/22-plasma-qq.png`
+:::
+
+# Interpreting a log-outcome model
+
+For
+
+$$\ln(Y)=a+bX,$$
+
+a one-unit increase in $X$ is associated with a multiplicative change of $e^b$ in the expected outcome. The exact percentage change is:
+
+$$100\left(e^b-1\right)\%.$$
+
+The approximation $100b\%$ is reasonable only when $b$ is small.
+
+# Summary
+
+- Plot and describe variables before fitting a model.
+- Put continuous predictors in **Covariates** and categorical predictors in **Factors**.
+- Interpret coefficients with units, reference categories and confidence intervals.
+- Use residual and influence diagnostics to identify model problems, but use study design to assess independence.
+- Treat automated variable selection and simple sample-size rules cautiously.
+- Save the `.omv` file so data, options and results can be reviewed and reproduced.
+
+# Items for statistical review
+
+- selection of Pearson or Spearman solely from Shapiro-Wilk tests;
+- causal interpretations of $r^2$;
+- universal observations-per-predictor rules;
+- claims of independence based on residual plots;
+- VIF < 5 as a definitive criterion;
+- automated stepwise selection;
+- transformed-coefficient interpretations;
+- numerical results copied from SPSS output.

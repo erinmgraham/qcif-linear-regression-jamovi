@@ -1,0 +1,93 @@
+---
+title: "Lesson 1: Correlation"
+---
+
+[Workshop home](index.qmd)
+
+# Correlation and regression
+
+- **Correlation** describes the strength and direction of association between variables.
+- **Regression** models an outcome as a function of one or more predictors.
+
+A positive association means larger values tend to occur together. A negative association means larger values of one variable tend to occur with smaller values of the other.
+
+The correlation coefficient ranges from -1 to 1:
+
+- $r=0$: no linear association;
+- $|r|=1$: perfect linear association;
+- $|r|<0.3$: often described as weak;
+- $0.3\le |r|\le0.7$: often described as moderate;
+- $|r|>0.7$: often described as strong.
+
+::: {.callout-caution}
+These labels are context-dependent. Interpret a correlation with its scatterplot, sample size, uncertainty and research context. Correlation does not establish causation.
+:::
+
+## Pearson, Spearman and Kendall
+
+- **Pearson's correlation** summarises a linear relationship between two continuous variables.
+- **Spearman's rank correlation** summarises a monotonic relationship using ranks.
+- **Kendall's tau** is another rank-based measure useful with ordinal data or many ties.
+
+The coefficient of determination is $r^2$. It is the squared correlation, not the percentage of one variable literally caused by another.
+
+# Exercise 1: Are age and resting SBP correlated?
+
+## Explore the variables
+
+1. Open the SBP dataset.
+2. Confirm that `age` and `trestbps` are continuous.
+3. Select **Analyses > Exploration > Descriptives**.
+4. Add `age` and `trestbps` to **Variables**.
+5. Request descriptive statistics, histograms, Q-Q plots and boxplots.
+6. Describe the centre, spread, shape and unusual observations.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: descriptives"}
+Suggested filenames: `images/02-descriptives-options.png` and `images/03-descriptives-output.png`
+:::
+
+## Draw a scatterplot
+
+Use a scatterplot to examine direction, form, strength, clusters and unusual observations.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: scatterplot"}
+Show `age` on the x-axis and `trestbps` on the y-axis, with a fitted line if available.
+
+Suggested filename: `images/04-age-sbp-scatterplot.png`
+:::
+
+## Calculate the correlation
+
+1. Select **Analyses > Regression > Correlation Matrix**.
+2. Add `age` and `trestbps`.
+3. Select **Spearman** to reproduce the source workflow. Optionally display Pearson for comparison.
+4. Request the significance level, confidence interval if available, and a plot if supported.
+
+::: {.callout-note title="Teaching note"}
+The source uses Shapiro-Wilk tests to select Pearson or Spearman correlation. If retained, also emphasise the scatterplot and form of the relationship. A formal normality test can flag small departures that are not practically important.
+:::
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: correlation matrix"}
+Suggested filenames: `images/05-correlation-options.png` and `images/06-correlation-output.png`
+:::
+
+## Interpret the result
+
+The source SPSS output reports a weak positive Spearman correlation, $r_s=0.269$, $p=0.007$. Re-run the analysis in jamovi and replace these values.
+
+> There was a [weak/moderate/strong] [positive/negative] association between age and resting systolic blood pressure, Spearman's $r_s$ = **[value]**, 95% CI **[lower, upper]**, $p$ = **[value]**.
+
+# Exercise 2: Correlations among candidate predictors
+
+1. Review a scatterplot matrix for the continuous variables.
+2. Select **Analyses > Regression > Correlation Matrix**.
+3. Add `trestbps`, `age`, `chol`, `thalach`, `oldpeak`, and other retained continuous variables.
+4. Select Spearman or Pearson according to the lesson decision.
+5. Identify variables most strongly associated with `trestbps`.
+6. Identify predictor pairs that may be strongly related.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: multivariable correlation matrix"}
+Suggested filename: `images/07-correlation-matrix-multiple.png`
+:::
+
+[Next: Simple linear regression](02-simple-linear-regression.qmd)

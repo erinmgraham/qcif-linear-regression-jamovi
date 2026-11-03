@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Linear Regression in jamovi"
+  sidebar:
+    style: docked
+    contents:
+      - index.qmd
+      - 01-correlation.qmd
+      - 02-simple-linear-regression.qmd
+      - 03-multiple-linear-regression.qmd
+      - 04-extended-exercise.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+
+execute:
+  echo: true
+  warning: false
+  message: false

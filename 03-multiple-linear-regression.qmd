@@ -1,0 +1,70 @@
+---
+title: "Lesson 3: Multiple Linear Regression"
+---
+
+[Workshop home](index.qmd) | [Previous: Simple linear regression](02-simple-linear-regression.qmd)
+
+# The model
+
+$$Y_i=a+b_1X_{1i}+b_2X_{2i}+\cdots+b_kX_{ki}+e_i$$
+
+Each coefficient is the expected change in the outcome for a one-unit increase in its predictor, **holding the other predictors constant**.
+
+Multiple regression can estimate adjusted associations, include prespecified confounders, improve prediction and test explicitly specified interactions.
+
+## Multicollinearity
+
+Strong relationships among predictors can make coefficients unstable. Inspect VIFs, tolerance, the correlation matrix and coefficient uncertainty. VIF < 5 is only a rule of thumb.
+
+## Overfitting and model selection
+
+A model can fit the present sample while performing poorly on new data. Avoid presenting automated stepwise selection as the default. Prefer predictors chosen from the research question and subject knowledge, with validation or penalised methods when prediction is the goal.
+
+::: {.callout-warning title="Decision for instructor review"}
+The source teaches stepwise selection. This lesson preserves it as an optional legacy workflow, but it should be reviewed by the statistics instructors.
+:::
+
+# Exercise 5: Identify predictors of resting SBP
+
+Candidate predictors include age, sex, cholesterol, fasting blood sugar and maximum heart rate.
+
+## Recommended workflow: prespecified model
+
+1. State the model and rationale before inspecting p-values.
+2. Confirm measurement levels and reference categories.
+3. Examine missing data and distributions.
+4. Examine relationships among continuous predictors.
+5. Put `trestbps` in **Dependent Variable**.
+6. Put continuous predictors such as `age`, `chol` and `thalach` in **Covariates**.
+7. Put categorical predictors such as `sex` and `fbs` in **Factors**.
+8. Request model fit, coefficient confidence intervals, residual plots, a Q-Q plot, collinearity statistics and Cook's distance.
+9. Interpret the model, uncertainty and diagnostics.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: multiple regression"}
+Suggested filenames: `images/15-multiple-regression-options.png`, `images/16-model-fit.png`, `images/17-coefficients.png`, and `images/18-collinearity.png`
+:::
+
+## Optional legacy workflow: stepwise selection
+
+If the source workflow remains:
+
+- label it as a legacy or demonstration approach;
+- explain that repeated data-driven selection can make p-values and confidence intervals overly optimistic;
+- do not say that stepwise selection controls overfitting;
+- compare the selected model with the prespecified model.
+
+The source selected age and fasting blood sugar, with adjusted $R^2$ approximately 0.119:
+
+$$\widehat{SBP}=103.3+0.52(\mathrm{age})+9.09(\mathrm{FBS>120})$$
+
+Recalculate this in jamovi and verify the coding of `fbs`.
+
+## Reporting template
+
+> The model included **[predictors]** and accounted for **[adjusted R-squared x 100]%** of sample variance in resting SBP. Holding other predictors constant, **[predictor]** was associated with an estimated **[coefficient] mmHg** change per **[unit/category contrast]** (95% CI **[lower, upper]**, $p$ = **[value]**). Diagnostics showed **[description]**.
+
+## Model checklist
+
+Record the outcome and predictors, measurement levels, reference categories, model equation, coefficient estimates, confidence intervals, $R^2$, adjusted $R^2$, residual diagnostics, influential observations, limitations and plain-language conclusion.
+
+[Next: Extended exercise](04-extended-exercise.qmd)

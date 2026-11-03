@@ -1,0 +1,82 @@
+---
+title: "Lesson 2: Simple Linear Regression"
+---
+
+[Workshop home](index.qmd) | [Previous: Correlation](01-correlation.qmd)
+
+# The model
+
+Simple linear regression predicts a continuous outcome from one predictor:
+
+$$Y_i=a+bX_i+e_i$$
+
+where $a$ is the intercept, $b$ is the slope and $e_i$ is the residual. The fitted value is $\hat{Y}_i=a+bX_i$, and $e_i=Y_i-\hat{Y}_i$. The least-squares line minimises the sum of squared residuals.
+
+## Hypothesis test
+
+$$H_0:b=0 \qquad H_1:b\ne0$$
+
+The p-value assesses compatibility with a zero slope under the model assumptions. The confidence interval expresses uncertainty in the coefficient.
+
+## Model fit
+
+- $R^2$ is the proportion of observed outcome variance accounted for by the fitted model in the sample.
+- Adjusted $R^2$ penalises model complexity and is helpful when comparing models with different numbers of predictors.
+
+# Exercise 3: Is resting SBP associated with age?
+
+1. Select **Analyses > Regression > Linear Regression**.
+2. Move `trestbps` to **Dependent Variable**.
+3. Move `age` to **Covariates**.
+4. Request $R$, $R^2$, adjusted $R^2$, the model test and ANOVA table if available.
+5. Request coefficient estimates, 95% confidence intervals and, if taught, standardised estimates.
+6. Request a residual Q-Q plot, residual plots, Cook's distance and available diagnostics.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: simple regression"}
+Suggested filenames: `images/08-simple-regression-options.png` and `images/09-simple-regression-output.png`
+:::
+
+## Interpret the source result
+
+The source reports $R=0.315$, adjusted $R^2=0.09$, an age coefficient of 0.604 mmHg per year and a 95% confidence interval of approximately 0.24 to 0.97. Verify all values in jamovi.
+
+> For each additional year of age, mean resting SBP was estimated to change by **[coefficient] mmHg** (95% CI **[lower, upper]**, $p$ = **[value]**). The model accounted for **[R-squared x 100]%** of sample variance in resting SBP.
+
+## Confidence and prediction intervals
+
+A confidence interval around the fitted mean describes uncertainty in the estimated mean outcome. A prediction interval describes where a new individual observation may fall and is therefore wider.
+
+## Assumptions and diagnostics
+
+1. **Outcome type:** `trestbps` is continuous.
+2. **Linearity:** residuals should show no systematic curve against fitted values.
+3. **Homoscedasticity:** residual spread should be reasonably consistent across fitted values.
+4. **Residual normality:** the Q-Q plot should show no serious systematic departures.
+5. **Independence:** justify this from study design and sampling, not merely a plot.
+6. **Influence:** inspect Cook's distance and investigate influential cases.
+
+::: {.callout-caution title="Correction to the source slides"}
+A random-looking residual plot does not prove independence. Also avoid treating 10 or 20 observations per predictor as a universal minimum; required sample size depends on precision, complexity, effect sizes and data quality.
+:::
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: diagnostics"}
+Suggested filenames: `images/10-residuals-fitted.png`, `images/11-residual-qq.png`, and `images/12-cooks-distance.png`
+:::
+
+# Exercise 4: Is resting SBP associated with sex?
+
+A categorical predictor belongs in **Factors**, not **Covariates**.
+
+1. Confirm that `sex` is nominal and labels are correct.
+2. Plot `trestbps` by `sex` using a boxplot and, if possible, raw observations.
+3. Put `trestbps` in **Dependent Variable** and `sex` in **Factors**.
+4. Verify the reference category.
+5. Request the coefficient, confidence interval, model statistics and diagnostics.
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: factor predictor"}
+Suggested filenames: `images/13-sex-boxplot.png` and `images/14-sex-regression.png`
+:::
+
+The source reports $R^2=0.012$ and a coefficient of -5.068 for its SPSS coding, with a confidence interval containing zero. Reproduce the coding shown by jamovi rather than copying the SPSS wording.
+
+[Next: Multiple linear regression](03-multiple-linear-regression.qmd)

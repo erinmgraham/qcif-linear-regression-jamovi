@@ -1,0 +1,88 @@
+---
+title: "Exploring and Predicting Using Linear Regression in jamovi"
+subtitle: "QCIF workshop draft converted from the SPSS slide deck"
+author: "QCIF Skills Development"
+---
+
+::: {.callout-warning title="Draft status"}
+This is a first-pass conversion of the existing SPSS workshop. The original sequence, examples and datasets are retained. Blocks labelled `SCREENSHOT TO REPLACE` mark jamovi images or output that must be created and checked against the workshop data.
+:::
+
+::: {.callout-note title="Licence"}
+The source slide deck states that it is licensed under CC BY-NC-ND 3.0 AU. Confirm the licence for this adapted version before publication.
+:::
+
+# Workshop overview
+
+This workshop introduces correlation, simple linear regression and multiple linear regression using jamovi. The source is intentionally kept close to ordinary Markdown so it can be adapted for Quarto or the Carpentries Workbench.
+
+## Lessons
+
+1. [Correlation](01-correlation.qmd)
+2. [Simple linear regression](02-simple-linear-regression.qmd)
+3. [Multiple linear regression](03-multiple-linear-regression.qmd)
+4. [Extended exercise: plasma beta-carotene](04-extended-exercise.qmd)
+
+## Learning outcomes
+
+By the end of the workshop, participants should be able to:
+
+- distinguish correlation from regression;
+- choose Pearson's or Spearman's correlation;
+- fit and interpret simple and multiple linear regression models in jamovi;
+- interpret coefficients, confidence intervals, p-values, $R^2$ and adjusted $R^2$;
+- assess linearity, residual normality, homoscedasticity, influential observations and multicollinearity;
+- explain the effect of transforming an outcome variable;
+- save a jamovi analysis so that data, settings and output remain together.
+
+## Suggested schedule
+
+| Time | Topic |
+|---|---|
+| 09:00 | Welcome, correlation theory and Exercises 1-2 |
+| 10:30 | Morning tea |
+| 11:00 | Simple linear regression and Exercises 3-4 |
+| 12:30 | Lunch |
+| 13:30 | Multiple linear regression and Exercise 5 |
+| 15:00 | Afternoon tea |
+| 15:30 | Extended beta-carotene exercise |
+| 17:00 | Close |
+
+# Setup
+
+1. Open jamovi Desktop or the agreed cloud installation.
+2. Open the workshop data file.
+3. Check that continuous variables are **Continuous** and categorical variables are **Nominal** or **Ordinal**.
+4. Save a working copy as an `.omv` file.
+
+::: {.callout-important title="Workshop files"}
+The source uses `LRinSPSS_Workshop_Data_SBP.sav` and `LRinSPSS_Workshop_Data_Plasma.sav`. Test the lessons with the final files distributed by QCIF and update these names if they are converted to `.omv` or `.csv`.
+:::
+
+::: {.callout-tip title="SCREENSHOT TO REPLACE: jamovi start screen"}
+Show the jamovi window, Open control and variable measurement-level icon.
+
+Suggested filename: `images/01-jamovi-start.png`
+:::
+
+## SBP data dictionary
+
+| Variable | Description | Suggested measure type |
+|---|---|---|
+| `age` | Age in years | Continuous |
+| `sex` | 0 = female, 1 = male | Nominal |
+| `cp` | Chest pain category | Nominal |
+| `trestbps` | Resting systolic BP in mmHg | Continuous |
+| `chol` | Blood cholesterol in mg/dL | Continuous |
+| `fbs` | Fasting blood sugar: 0 = <=120 mg/dL, 1 = >120 mg/dL | Nominal |
+| `exang` | Exercise-induced angina: 0 = no, 1 = yes | Nominal |
+| `thalach` | Maximum heart rate achieved in bpm | Continuous |
+| `oldpeak` | ST-wave depression induced by exercise | Continuous |
+| `slope` | Peak exercise ST-segment slope | Ordinal |
+| `ca` | Number of major vessels coloured by fluoroscopy | Ordinal |
+| `class` | Diagnosis: 0 = no disease, 1 = disease | Nominal |
+| `restecg` | Resting ECG category | Nominal |
+
+# Maintainer notes
+
+Keep the source deliberately simple: headings, prose, lists, tables, links, images, equations and occasional callouts. Content decisions should be reviewed by the statistics instructors rather than silently changed during the platform conversion.
