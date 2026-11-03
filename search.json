@@ -1,72 +1,62 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "objectID": "01-correlation.html",
+    "href": "01-correlation.html",
+    "title": "Lesson 1: Correlation",
     "section": "",
-    "text": "WarningDraft status\n\n\n\nThis is a first-pass conversion of the existing SPSS workshop. The original sequence, examples and datasets are retained. Blocks labelled SCREENSHOT TO REPLACE mark jamovi images or output that must be created and checked against the workshop data.",
+    "text": "Workshop home",
     "crumbs": [
-      "Exploring and Predicting Using Linear Regression in jamovi"
+      "Lesson 1: Correlation"
     ]
   },
   {
-    "objectID": "index.html#lessons",
-    "href": "index.html#lessons",
-    "title": "Exploring and Predicting Using Linear Regression in jamovi",
-    "section": "1.1 Lessons",
-    "text": "1.1 Lessons\n\nCorrelation\nSimple linear regression\nMultiple linear regression\nExtended exercise: plasma beta-carotene",
+    "objectID": "01-correlation.html#pearson-spearman-and-kendall",
+    "href": "01-correlation.html#pearson-spearman-and-kendall",
+    "title": "Lesson 1: Correlation",
+    "section": "1.1 Pearson, Spearman and Kendall",
+    "text": "1.1 Pearson, Spearman and Kendall\n\nPearson’s correlation summarises a linear relationship between two continuous variables.\nSpearman’s rank correlation summarises a monotonic relationship using ranks.\nKendall’s tau is another rank-based measure useful with ordinal data or many ties.\n\nThe coefficient of determination is \\(r^2\\). It is the squared correlation, not the percentage of one variable literally caused by another.",
     "crumbs": [
-      "Exploring and Predicting Using Linear Regression in jamovi"
+      "Lesson 1: Correlation"
     ]
   },
   {
-    "objectID": "index.html#learning-outcomes",
-    "href": "index.html#learning-outcomes",
-    "title": "Exploring and Predicting Using Linear Regression in jamovi",
-    "section": "1.2 Learning outcomes",
-    "text": "1.2 Learning outcomes\nBy the end of the workshop, participants should be able to:\n\ndistinguish correlation from regression;\nchoose Pearson’s or Spearman’s correlation;\nfit and interpret simple and multiple linear regression models in jamovi;\ninterpret coefficients, confidence intervals, p-values, \\(R^2\\) and adjusted \\(R^2\\);\nassess linearity, residual normality, homoscedasticity, influential observations and multicollinearity;\nexplain the effect of transforming an outcome variable;\nsave a jamovi analysis so that data, settings and output remain together.",
+    "objectID": "01-correlation.html#explore-the-variables",
+    "href": "01-correlation.html#explore-the-variables",
+    "title": "Lesson 1: Correlation",
+    "section": "2.1 Explore the variables",
+    "text": "2.1 Explore the variables\n\nOpen the SBP dataset.\nConfirm that age and trestbps are continuous.\nSelect Analyses &gt; Exploration &gt; Descriptives.\nAdd age and trestbps to Variables.\nRequest descriptive statistics, histograms, Q-Q plots and boxplots.\nDescribe the centre, spread, shape and unusual observations.\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: descriptives\n\n\n\nSuggested filenames: images/02-descriptives-options.png and images/03-descriptives-output.png",
     "crumbs": [
-      "Exploring and Predicting Using Linear Regression in jamovi"
+      "Lesson 1: Correlation"
     ]
   },
   {
-    "objectID": "index.html#suggested-schedule",
-    "href": "index.html#suggested-schedule",
-    "title": "Exploring and Predicting Using Linear Regression in jamovi",
-    "section": "1.3 Suggested schedule",
-    "text": "1.3 Suggested schedule\n\n\n\nTime\nTopic\n\n\n\n\n09:00\nWelcome, correlation theory and Exercises 1-2\n\n\n10:30\nMorning tea\n\n\n11:00\nSimple linear regression and Exercises 3-4\n\n\n12:30\nLunch\n\n\n13:30\nMultiple linear regression and Exercise 5\n\n\n15:00\nAfternoon tea\n\n\n15:30\nExtended beta-carotene exercise\n\n\n17:00\nClose",
+    "objectID": "01-correlation.html#draw-a-scatterplot",
+    "href": "01-correlation.html#draw-a-scatterplot",
+    "title": "Lesson 1: Correlation",
+    "section": "2.2 Draw a scatterplot",
+    "text": "2.2 Draw a scatterplot\nUse a scatterplot to examine direction, form, strength, clusters and unusual observations.\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: scatterplot\n\n\n\nShow age on the x-axis and trestbps on the y-axis, with a fitted line if available.\nSuggested filename: images/04-age-sbp-scatterplot.png",
     "crumbs": [
-      "Exploring and Predicting Using Linear Regression in jamovi"
+      "Lesson 1: Correlation"
     ]
   },
   {
-    "objectID": "index.html#sbp-data-dictionary",
-    "href": "index.html#sbp-data-dictionary",
-    "title": "Exploring and Predicting Using Linear Regression in jamovi",
-    "section": "2.1 SBP data dictionary",
-    "text": "2.1 SBP data dictionary\n\n\n\n\n\n\n\n\nVariable\nDescription\nSuggested measure type\n\n\n\n\nage\nAge in years\nContinuous\n\n\nsex\n0 = female, 1 = male\nNominal\n\n\ncp\nChest pain category\nNominal\n\n\ntrestbps\nResting systolic BP in mmHg\nContinuous\n\n\nchol\nBlood cholesterol in mg/dL\nContinuous\n\n\nfbs\nFasting blood sugar: 0 = &lt;=120 mg/dL, 1 = &gt;120 mg/dL\nNominal\n\n\nexang\nExercise-induced angina: 0 = no, 1 = yes\nNominal\n\n\nthalach\nMaximum heart rate achieved in bpm\nContinuous\n\n\noldpeak\nST-wave depression induced by exercise\nContinuous\n\n\nslope\nPeak exercise ST-segment slope\nOrdinal\n\n\nca\nNumber of major vessels coloured by fluoroscopy\nOrdinal\n\n\nclass\nDiagnosis: 0 = no disease, 1 = disease\nNominal\n\n\nrestecg\nResting ECG category\nNominal",
+    "objectID": "01-correlation.html#calculate-the-correlation",
+    "href": "01-correlation.html#calculate-the-correlation",
+    "title": "Lesson 1: Correlation",
+    "section": "2.3 Calculate the correlation",
+    "text": "2.3 Calculate the correlation\n\nSelect Analyses &gt; Regression &gt; Correlation Matrix.\nAdd age and trestbps.\nSelect Spearman to reproduce the source workflow. Optionally display Pearson for comparison.\nRequest the significance level, confidence interval if available, and a plot if supported.\n\n\n\n\n\n\n\nNoteTeaching note\n\n\n\nThe source uses Shapiro-Wilk tests to select Pearson or Spearman correlation. If retained, also emphasise the scatterplot and form of the relationship. A formal normality test can flag small departures that are not practically important.\n\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: correlation matrix\n\n\n\nSuggested filenames: images/05-correlation-options.png and images/06-correlation-output.png",
     "crumbs": [
-      "Exploring and Predicting Using Linear Regression in jamovi"
+      "Lesson 1: Correlation"
     ]
   },
   {
-    "objectID": "04-extended-exercise.html",
-    "href": "04-extended-exercise.html",
-    "title": "Lesson 4: Extended Plasma Beta-Carotene Exercise",
-    "section": "",
-    "text": "Workshop home | Previous: Multiple linear regression",
+    "objectID": "01-correlation.html#interpret-the-result",
+    "href": "01-correlation.html#interpret-the-result",
+    "title": "Lesson 1: Correlation",
+    "section": "2.4 Interpret the result",
+    "text": "2.4 Interpret the result\nThe source SPSS output reports a weak positive Spearman correlation, \\(r_s=0.269\\), \\(p=0.007\\). Re-run the analysis in jamovi and replace these values.\n\nThere was a [weak/moderate/strong] [positive/negative] association between age and resting systolic blood pressure, Spearman’s \\(r_s\\) = [value], 95% CI [lower, upper], \\(p\\) = [value].",
     "crumbs": [
-      "Lesson 4: Extended Plasma Beta-Carotene Exercise"
-    ]
-  },
-  {
-    "objectID": "04-extended-exercise.html#categorical-predictors",
-    "href": "04-extended-exercise.html#categorical-predictors",
-    "title": "Lesson 4: Extended Plasma Beta-Carotene Exercise",
-    "section": "2.1 Categorical predictors",
-    "text": "2.1 Categorical predictors\nAdd categorical predictors to Factors, allowing jamovi to handle indicator coding. Confirm the reference level. Manual dummy variables are unnecessary unless the lesson is intentionally teaching their construction.\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: computed log outcome\n\n\n\nThe source uses a transformation equivalent to ln(betaplasma + 1) because a zero is present. Capture and verify the final formula.\nSuggested filename: images/19-log-transform.png\n\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: plasma models\n\n\n\nSuggested filenames: images/20-plasma-model.png, images/21-plasma-residuals.png, and images/22-plasma-qq.png",
-    "crumbs": [
-      "Lesson 4: Extended Plasma Beta-Carotene Exercise"
+      "Lesson 1: Correlation"
     ]
   },
   {
@@ -130,64 +120,11 @@
     ]
   },
   {
-    "objectID": "01-correlation.html",
-    "href": "01-correlation.html",
-    "title": "Lesson 1: Correlation",
+    "objectID": "images/IMAGES_README.html",
+    "href": "images/IMAGES_README.html",
+    "title": "1 Screenshot assets",
     "section": "",
-    "text": "Workshop home",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
-  },
-  {
-    "objectID": "01-correlation.html#pearson-spearman-and-kendall",
-    "href": "01-correlation.html#pearson-spearman-and-kendall",
-    "title": "Lesson 1: Correlation",
-    "section": "1.1 Pearson, Spearman and Kendall",
-    "text": "1.1 Pearson, Spearman and Kendall\n\nPearson’s correlation summarises a linear relationship between two continuous variables.\nSpearman’s rank correlation summarises a monotonic relationship using ranks.\nKendall’s tau is another rank-based measure useful with ordinal data or many ties.\n\nThe coefficient of determination is \\(r^2\\). It is the squared correlation, not the percentage of one variable literally caused by another.",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
-  },
-  {
-    "objectID": "01-correlation.html#explore-the-variables",
-    "href": "01-correlation.html#explore-the-variables",
-    "title": "Lesson 1: Correlation",
-    "section": "2.1 Explore the variables",
-    "text": "2.1 Explore the variables\n\nOpen the SBP dataset.\nConfirm that age and trestbps are continuous.\nSelect Analyses &gt; Exploration &gt; Descriptives.\nAdd age and trestbps to Variables.\nRequest descriptive statistics, histograms, Q-Q plots and boxplots.\nDescribe the centre, spread, shape and unusual observations.\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: descriptives\n\n\n\nSuggested filenames: images/02-descriptives-options.png and images/03-descriptives-output.png",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
-  },
-  {
-    "objectID": "01-correlation.html#draw-a-scatterplot",
-    "href": "01-correlation.html#draw-a-scatterplot",
-    "title": "Lesson 1: Correlation",
-    "section": "2.2 Draw a scatterplot",
-    "text": "2.2 Draw a scatterplot\nUse a scatterplot to examine direction, form, strength, clusters and unusual observations.\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: scatterplot\n\n\n\nShow age on the x-axis and trestbps on the y-axis, with a fitted line if available.\nSuggested filename: images/04-age-sbp-scatterplot.png",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
-  },
-  {
-    "objectID": "01-correlation.html#calculate-the-correlation",
-    "href": "01-correlation.html#calculate-the-correlation",
-    "title": "Lesson 1: Correlation",
-    "section": "2.3 Calculate the correlation",
-    "text": "2.3 Calculate the correlation\n\nSelect Analyses &gt; Regression &gt; Correlation Matrix.\nAdd age and trestbps.\nSelect Spearman to reproduce the source workflow. Optionally display Pearson for comparison.\nRequest the significance level, confidence interval if available, and a plot if supported.\n\n\n\n\n\n\n\nNoteTeaching note\n\n\n\nThe source uses Shapiro-Wilk tests to select Pearson or Spearman correlation. If retained, also emphasise the scatterplot and form of the relationship. A formal normality test can flag small departures that are not practically important.\n\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: correlation matrix\n\n\n\nSuggested filenames: images/05-correlation-options.png and images/06-correlation-output.png",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
-  },
-  {
-    "objectID": "01-correlation.html#interpret-the-result",
-    "href": "01-correlation.html#interpret-the-result",
-    "title": "Lesson 1: Correlation",
-    "section": "2.4 Interpret the result",
-    "text": "2.4 Interpret the result\nThe source SPSS output reports a weak positive Spearman correlation, \\(r_s=0.269\\), \\(p=0.007\\). Re-run the analysis in jamovi and replace these values.\n\nThere was a [weak/moderate/strong] [positive/negative] association between age and resting systolic blood pressure, Spearman’s \\(r_s\\) = [value], 95% CI [lower, upper], \\(p\\) = [value].",
-    "crumbs": [
-      "Lesson 1: Correlation"
-    ]
+    "text": "1 Screenshot assets\nPlace the jamovi screenshots named in the lesson placeholders in this directory."
   },
   {
     "objectID": "03-multiple-linear-regression.html",
@@ -260,10 +197,73 @@
     ]
   },
   {
-    "objectID": "images/IMAGES_README.html",
-    "href": "images/IMAGES_README.html",
-    "title": "1 Screenshot assets",
+    "objectID": "04-extended-exercise.html",
+    "href": "04-extended-exercise.html",
+    "title": "Lesson 4: Extended Plasma Beta-Carotene Exercise",
     "section": "",
-    "text": "1 Screenshot assets\nPlace the jamovi screenshots named in the lesson placeholders in this directory."
+    "text": "Workshop home | Previous: Multiple linear regression",
+    "crumbs": [
+      "Lesson 4: Extended Plasma Beta-Carotene Exercise"
+    ]
+  },
+  {
+    "objectID": "04-extended-exercise.html#categorical-predictors",
+    "href": "04-extended-exercise.html#categorical-predictors",
+    "title": "Lesson 4: Extended Plasma Beta-Carotene Exercise",
+    "section": "2.1 Categorical predictors",
+    "text": "2.1 Categorical predictors\nAdd categorical predictors to Factors, allowing jamovi to handle indicator coding. Confirm the reference level. Manual dummy variables are unnecessary unless the lesson is intentionally teaching their construction.\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: computed log outcome\n\n\n\nThe source uses a transformation equivalent to ln(betaplasma + 1) because a zero is present. Capture and verify the final formula.\nSuggested filename: images/19-log-transform.png\n\n\n\n\n\n\n\n\nTipSCREENSHOT TO REPLACE: plasma models\n\n\n\nSuggested filenames: images/20-plasma-model.png, images/21-plasma-residuals.png, and images/22-plasma-qq.png",
+    "crumbs": [
+      "Lesson 4: Extended Plasma Beta-Carotene Exercise"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "section": "",
+    "text": "WarningDraft status\n\n\n\nThis is a first-pass conversion of the existing SPSS workshop. The original sequence, examples and datasets are retained. Blocks labelled SCREENSHOT TO REPLACE mark jamovi images or output that must be created and checked against the workshop data.",
+    "crumbs": [
+      "Exploring and Predicting Using Linear Regression in jamovi"
+    ]
+  },
+  {
+    "objectID": "index.html#lessons",
+    "href": "index.html#lessons",
+    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "section": "1.1 Lessons",
+    "text": "1.1 Lessons\n\nCorrelation\nSimple linear regression\nMultiple linear regression\nExtended exercise: plasma beta-carotene",
+    "crumbs": [
+      "Exploring and Predicting Using Linear Regression in jamovi"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "section": "1.2 Learning outcomes",
+    "text": "1.2 Learning outcomes\nBy the end of the workshop, participants should be able to:\n\ndistinguish correlation from regression;\nchoose Pearson’s or Spearman’s correlation;\nfit and interpret simple and multiple linear regression models in jamovi;\ninterpret coefficients, confidence intervals, p-values, \\(R^2\\) and adjusted \\(R^2\\);\nassess linearity, residual normality, homoscedasticity, influential observations and multicollinearity;\nexplain the effect of transforming an outcome variable;\nsave a jamovi analysis so that data, settings and output remain together.",
+    "crumbs": [
+      "Exploring and Predicting Using Linear Regression in jamovi"
+    ]
+  },
+  {
+    "objectID": "index.html#suggested-schedule",
+    "href": "index.html#suggested-schedule",
+    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "section": "1.3 Suggested schedule",
+    "text": "1.3 Suggested schedule\n\n\n\nTime\nTopic\n\n\n\n\n09:00\nWelcome, correlation theory and Exercises 1-2\n\n\n10:30\nMorning tea\n\n\n11:00\nSimple linear regression and Exercises 3-4\n\n\n12:30\nLunch\n\n\n13:30\nMultiple linear regression and Exercise 5\n\n\n15:00\nAfternoon tea\n\n\n15:30\nExtended beta-carotene exercise\n\n\n17:00\nClose",
+    "crumbs": [
+      "Exploring and Predicting Using Linear Regression in jamovi"
+    ]
+  },
+  {
+    "objectID": "index.html#sbp-data-dictionary",
+    "href": "index.html#sbp-data-dictionary",
+    "title": "Exploring and Predicting Using Linear Regression in jamovi",
+    "section": "2.1 SBP data dictionary",
+    "text": "2.1 SBP data dictionary\n\n\n\n\n\n\n\n\nVariable\nDescription\nSuggested measure type\n\n\n\n\nage\nAge in years\nContinuous\n\n\nsex\n0 = female, 1 = male\nNominal\n\n\ncp\nChest pain category\nNominal\n\n\ntrestbps\nResting systolic BP in mmHg\nContinuous\n\n\nchol\nBlood cholesterol in mg/dL\nContinuous\n\n\nfbs\nFasting blood sugar: 0 = &lt;=120 mg/dL, 1 = &gt;120 mg/dL\nNominal\n\n\nexang\nExercise-induced angina: 0 = no, 1 = yes\nNominal\n\n\nthalach\nMaximum heart rate achieved in bpm\nContinuous\n\n\noldpeak\nST-wave depression induced by exercise\nContinuous\n\n\nslope\nPeak exercise ST-segment slope\nOrdinal\n\n\nca\nNumber of major vessels coloured by fluoroscopy\nOrdinal\n\n\nclass\nDiagnosis: 0 = no disease, 1 = disease\nNominal\n\n\nrestecg\nResting ECG category\nNominal",
+    "crumbs": [
+      "Exploring and Predicting Using Linear Regression in jamovi"
+    ]
   }
 ]
